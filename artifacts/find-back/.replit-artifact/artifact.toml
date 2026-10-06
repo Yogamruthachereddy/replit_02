@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "FIND-BACK"
+description = "A privacy-conscious missing-person reporting and case coordination platform for families, community reporters, and authorized reviewers. Supports public-safe case discovery, sightings, verification, and case updates."
+version = "1.0.0"
+id = "artifacts/find-back"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22077
+
+[services.development]
+run = "pnpm --filter @workspace/find-back run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/find-back", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/find-back/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22077"
+BASE_PATH = "/"

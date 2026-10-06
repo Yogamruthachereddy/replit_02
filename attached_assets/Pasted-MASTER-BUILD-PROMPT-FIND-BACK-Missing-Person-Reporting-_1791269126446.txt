@@ -1,0 +1,1980 @@
+MASTER BUILD PROMPT — FIND-BACK
+Missing Person Reporting, Verification & Case Management Platform
+Build to Ship Hackathon
+
+============================================================
+IMPORTANT: BUILD THE ACTUAL WORKING APPLICATION
+============================================================
+
+You are an expert full-stack engineer, UI/UX designer, product designer,
+database architect, security engineer, and hackathon MVP specialist.
+
+Build a complete, polished, production-style web application called:
+
+FIND-BACK
+
+Tagline:
+"Verified information. Faster action. Bring them home."
+
+This project is being built for the BUILD TO SHIP HACKATHON.
+
+Do NOT create only a static frontend or a visual mockup.
+
+Build a fully functional full-stack MVP with:
+
+- Frontend
+- Backend/API where required
+- Supabase database
+- Supabase authentication
+- Row Level Security
+- Role-based access
+- CRUD operations
+- Search
+- Filtering
+- Maps
+- Location management
+- Missing-person reports
+- Verification workflow
+- Sightings
+- Case updates
+- Notifications
+- Admin dashboard
+- Authority dashboard
+- Analytics
+- Audit logs
+- Responsive design
+- Demo data
+- Error handling
+- Loading states
+- Security protections
+
+The final application must feel like a real startup/product rather than
+a basic college project.
+
+============================================================
+1. SUPABASE CONFIGURATION
+============================================================
+
+Use SUPABASE as the primary backend/database/authentication platform.
+
+Supabase Project URL:
+
+https://xeacsypbukaupzhynghk.supabase.co
+
+Supabase Publishable Key:
+
+sb_publishable_ZOYwMtNixcFWONfrmsavew_BQfh1M4I
+
+IMPORTANT SECURITY RULE:
+
+Do NOT hard-code the publishable key directly throughout the application.
+
+Create environment variables.
+
+Use:
+
+VITE_SUPABASE_URL=https://xeacsypbukaupzhynghk.supabase.co
+
+VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_ZOYwMtNixcFWONfrmsavew_BQfh1M4I
+
+If the project uses server-side Supabase access, use separate server
+environment variables.
+
+NEVER expose:
+- Supabase service-role key
+- Database password
+- JWT secret
+- Any private API key
+
+Never put service-role credentials in frontend code.
+
+Use Supabase RLS to protect all sensitive database tables.
+
+============================================================
+2. PRODUCT VISION
+============================================================
+
+FindBack is a secure platform connecting:
+
+- Families
+- Citizens
+- Reporters
+- Volunteers
+- Authorized authorities
+- Administrators
+
+The platform allows users to:
+
+1. Report missing persons
+2. Submit information
+3. Search verified cases
+4. Submit sightings
+5. Track case updates
+6. Manage locations
+7. Verify reports
+8. Manage cases
+9. Analyze case statistics
+
+Core workflow:
+
+REPORT
+   ↓
+VERIFY
+   ↓
+PUBLISH
+   ↓
+DISCOVER
+   ↓
+SIGHTING
+   ↓
+REVIEW
+   ↓
+UPDATE
+   ↓
+RESOLVE
+
+Core principle:
+
+"Verification before amplification."
+
+============================================================
+3. SAFETY & PRIVACY PRINCIPLES
+============================================================
+
+This application deals with sensitive personal information.
+
+Implement privacy-by-design.
+
+Public users should NOT see:
+- Private phone numbers
+- Private email addresses
+- Exact private addresses
+- Sensitive evidence
+- Authority-only notes
+- Internal investigation information
+
+Public users can see only information appropriate for helping identify
+a missing person.
+
+Authorized users may access additional information according to their role.
+
+Never expose sensitive data simply by hiding it in the frontend.
+
+Use server/database-level authorization and Supabase Row Level Security.
+
+AI must NEVER make a final decision about whether someone is a missing person,
+whether a sighting is genuine, or whether a person has been found.
+
+AI can only provide assistance to authorized human reviewers.
+
+============================================================
+4. TECH STACK
+============================================================
+
+Frontend:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui or equivalent
+- Lucide React icons
+
+Backend:
+
+Use Supabase as the primary backend.
+
+Use:
+- Supabase PostgreSQL
+- Supabase Auth
+- Supabase Storage
+- Supabase Realtime where useful
+- Supabase Edge Functions only where necessary
+
+Maps:
+
+Use:
+- Leaflet
+- OpenStreetMap
+
+Charts:
+
+- Recharts
+
+Forms:
+
+- React Hook Form
+- Zod validation
+
+Use modern reusable components.
+
+============================================================
+5. BRANDING
+============================================================
+
+Product name:
+
+FIND-BACK
+
+Tagline:
+
+"Verified information. Faster action. Bring them home."
+
+Brand personality:
+
+- Trustworthy
+- Secure
+- Human
+- Professional
+- Calm
+- Modern
+- Helpful
+
+Primary color:
+Deep blue
+
+Secondary:
+Teal/green
+
+Warning:
+Amber
+
+Danger:
+Red
+
+Use a clean white/light interface.
+
+Add optional dark mode.
+
+Typography:
+Inter or another modern sans-serif.
+
+Avoid:
+- Excessive gradients
+- Excessive glassmorphism
+- Cartoonish designs
+- Overly flashy animations
+- Dark dramatic missing-person imagery
+
+The website should look suitable for:
+- A startup
+- NGO
+- Public service platform
+- Authority collaboration platform
+
+============================================================
+6. LANDING PAGE
+============================================================
+
+Create a premium landing page.
+
+Hero:
+
+FIND-BACK
+
+"Verified information. Faster action. Bring them home."
+
+Description:
+
+"A secure platform for reporting missing persons, verifying information,
+sharing sightings, and coordinating case updates."
+
+Primary button:
+
+REPORT A MISSING PERSON
+
+Secondary:
+
+SEARCH MISSING PERSONS
+
+Hero visual:
+
+Create a professional map/dashboard-inspired visual showing:
+- Case markers
+- Verified markers
+- Case cards
+- Location indicators
+
+Do NOT use disturbing imagery.
+
+Add statistics:
+
+- Active Cases
+- Verified Cases
+- Sightings
+- Cases Resolved
+
+If statistics are demo data, clearly treat them as platform/demo statistics.
+
+Sections:
+
+1. How FindBack Works
+2. Search Missing Persons
+3. Recent Verified Cases
+4. Location Intelligence
+5. Verification
+6. Privacy & Safety
+7. Call To Action
+
+Footer:
+
+- About
+- Privacy
+- Terms
+- Safety
+- Contact
+- Report Abuse
+- Admin Login
+
+============================================================
+7. USER ROLES
+============================================================
+
+Implement role-based access.
+
+Roles:
+
+PUBLIC
+USER
+REPORTER
+AUTHORITY
+ADMIN
+
+PUBLIC:
+
+- Browse public cases
+- Search cases
+- View public-safe information
+- Submit a sighting
+
+USER:
+
+- Everything public users can do
+- Create missing-person reports
+- Track own reports
+- Submit sightings
+- Receive notifications
+
+REPORTER/FAMILY:
+
+- Manage their own cases
+- View authorized case updates
+- Submit additional information
+- View permitted restricted information
+
+AUTHORITY:
+
+- Review reports
+- Verify reports
+- Reject reports
+- Review sightings
+- Verify sightings
+- Update cases
+- Add official notes
+- View restricted information
+
+ADMIN:
+
+- Full access
+- User management
+- Case management
+- Verification management
+- Analytics
+- Audit logs
+- Moderation
+- Settings
+
+IMPORTANT:
+
+Never rely only on frontend role checks.
+
+Implement authorization using Supabase RLS and secure backend logic.
+
+============================================================
+8. AUTHENTICATION
+============================================================
+
+Use Supabase Authentication.
+
+Create:
+
+/login
+/register
+/forgot-password
+/reset-password
+
+Registration:
+
+- Full name
+- Email
+- Phone
+- Password
+- Confirm password
+- User role/type
+
+Do NOT allow users to freely register as ADMIN or AUTHORITY.
+
+Default new users should be USER.
+
+Authority/admin roles must be assigned securely.
+
+Login:
+
+- Email
+- Password
+
+Implement:
+
+- Session persistence
+- Logout
+- Protected routes
+- Role-based routing
+- Password reset
+- Authentication state management
+
+Create demo accounts if supported by Supabase.
+
+Recommended demo roles:
+
+User:
+user@findback.demo
+
+Authority:
+authority@findback.demo
+
+Admin:
+admin@findback.demo
+
+Do not display real passwords in production.
+
+Create a safe demo-login mechanism if possible.
+
+============================================================
+9. DATABASE
+============================================================
+
+Use Supabase PostgreSQL.
+
+Create proper tables and relationships.
+
+Tables:
+
+profiles
+missing_persons
+sightings
+case_updates
+notifications
+verifications
+audit_logs
+report_flags
+case_locations
+
+============================================================
+10. PROFILES TABLE
+============================================================
+
+Fields:
+
+id UUID primary key
+name
+email
+phone
+role
+status
+avatar_url
+created_at
+updated_at
+
+Roles:
+
+user
+reporter
+authority
+admin
+
+Statuses:
+
+active
+suspended
+
+Create RLS policies.
+
+Users can read/update their own profile where appropriate.
+
+Only admins can manage roles.
+
+============================================================
+11. MISSING PERSONS TABLE
+============================================================
+
+Fields:
+
+id UUID
+case_id
+full_name
+age
+date_of_birth
+gender
+photo_url
+height
+identifying_marks
+hair_description
+eye_description
+clothing_description
+last_seen_date
+last_seen_time
+last_seen_location
+latitude
+longitude
+circumstances
+status
+reporter_id
+verified_by
+verified_at
+created_at
+updated_at
+
+Case statuses:
+
+pending_verification
+verified
+active
+under_investigation
+possible_sighting
+found
+closed
+rejected
+
+Generate case IDs like:
+
+FB-2026-00124
+
+Case IDs must be unique.
+
+============================================================
+12. SIGHTINGS TABLE
+============================================================
+
+Fields:
+
+id
+case_id
+submitted_by
+date
+time
+location
+latitude
+longitude
+description
+evidence_url
+status
+reviewed_by
+reviewed_at
+created_at
+
+Statuses:
+
+pending_review
+verified
+rejected
+needs_more_information
+
+============================================================
+13. CASE UPDATES TABLE
+============================================================
+
+Fields:
+
+id
+case_id
+author_id
+type
+message
+visibility
+created_at
+
+Types:
+
+report_submitted
+verification
+sighting
+investigation
+status_change
+official_note
+found
+closed
+
+Visibility:
+
+public
+reporter
+authority
+admin
+
+============================================================
+14. NOTIFICATIONS TABLE
+============================================================
+
+Fields:
+
+id
+user_id
+type
+title
+message
+read
+created_at
+
+Notification types:
+
+report_submitted
+report_verified
+report_rejected
+new_sighting
+status_changed
+authority_update
+possible_match
+
+============================================================
+15. VERIFICATIONS TABLE
+============================================================
+
+Fields:
+
+id
+case_id
+reviewer_id
+decision
+notes
+created_at
+
+Decisions:
+
+verified
+rejected
+more_information_required
+
+============================================================
+16. AUDIT LOGS
+============================================================
+
+Fields:
+
+id
+user_id
+action
+entity_type
+entity_id
+metadata
+created_at
+
+Log:
+
+- Login
+- Case creation
+- Case update
+- Verification
+- Rejection
+- Sighting submission
+- Sighting review
+- Status change
+- User role change
+- Case closure
+
+Important actions should be auditable.
+
+============================================================
+17. REPORT FLAGS
+============================================================
+
+Fields:
+
+id
+case_id
+reporter_id
+reason
+status
+created_at
+
+Allow users to flag:
+
+- False information
+- Spam
+- Inappropriate content
+- Duplicate
+- Privacy issue
+
+============================================================
+18. ROW LEVEL SECURITY
+============================================================
+
+Enable RLS on ALL sensitive tables.
+
+Create policies such as:
+
+Public:
+Can read only public-safe verified/active cases.
+
+Authenticated users:
+Can create reports.
+
+Users:
+Can read their own reports.
+
+Reporters:
+Can manage their own submitted information.
+
+Authorities:
+Can review cases and sightings.
+
+Admins:
+Can manage everything.
+
+Sightings:
+Users can create sightings.
+Only authorized reviewers can verify/reject sightings.
+
+Audit logs:
+Only admin/authorized roles can view.
+
+Notifications:
+Users can only see their own notifications.
+
+NEVER disable RLS simply to make the application work.
+
+============================================================
+19. REPORT MISSING PERSON
+============================================================
+
+Create:
+
+/report
+
+Use a beautiful multi-step form.
+
+STEP 1:
+PERSON INFORMATION
+
+Fields:
+
+Full name
+Age
+Date of birth
+Gender
+Photograph
+Height
+Identifying marks
+Hair description
+Eye description
+Other identifying details
+
+STEP 2:
+LAST KNOWN INFORMATION
+
+Fields:
+
+Last seen date
+Last seen time
+Last seen location
+Area
+Landmark
+Clothing description
+Circumstances
+Additional notes
+
+STEP 3:
+REPORTER
+
+Fields:
+
+Reporter name
+Relationship
+Phone
+Email
+Preferred contact method
+
+STEP 4:
+REVIEW
+
+Show all information.
+
+Button:
+
+SUBMIT FOR VERIFICATION
+
+After submission:
+
+Show:
+- Case ID
+- Submission timestamp
+- Status
+- Next steps
+
+Status:
+
+PENDING VERIFICATION
+
+============================================================
+20. PHOTO UPLOAD
+============================================================
+
+Use Supabase Storage.
+
+Create appropriate storage buckets.
+
+Validate:
+
+- File type
+- File size
+- Image dimensions
+
+Allowed:
+JPG
+JPEG
+PNG
+WEBP
+
+Generate preview.
+
+Allow removal/replacement before submission.
+
+Protect private uploads where necessary.
+
+============================================================
+21. MISSING PERSON SEARCH
+============================================================
+
+Create:
+
+/missing-persons
+
+Search:
+
+- Name
+- Case ID
+- Age
+- Gender
+- State
+- District
+- City
+- Location
+- Status
+- Date reported
+
+UI:
+
+Search bar
+Filter panel
+Sort
+Grid/list toggle
+Map/list toggle
+
+Cards:
+
+Photo
+Name
+Age
+Last seen area
+Date missing
+Status
+Case ID
+
+Pagination.
+
+Empty states.
+
+============================================================
+22. CASE DETAILS
+============================================================
+
+Create:
+
+/case/:id
+
+Display:
+
+- Photo
+- Name
+- Age
+- Gender
+- Case ID
+- Status
+- Last seen information
+- Clothing
+- Identifying marks
+- Timeline
+- Verified sightings
+- Location
+- Updates
+
+Buttons:
+
+REPORT A SIGHTING
+SHARE CASE
+VIEW TIMELINE
+
+Authorized:
+
+UPDATE CASE
+ADD OFFICIAL NOTE
+CHANGE STATUS
+
+Protect sensitive information.
+
+============================================================
+23. SIGHTING REPORT
+============================================================
+
+Create:
+
+/case/:id/report-sighting
+
+Fields:
+
+Date
+Time
+Location
+Description
+What was observed
+Optional photo/evidence
+Contact preference
+Anonymous submission
+
+Show safety notice:
+
+"Only submit information you believe is accurate.
+Do not confront or follow a person yourself.
+Contact appropriate authorities if there is an immediate safety concern."
+
+After submission:
+
+PENDING REVIEW
+
+============================================================
+24. AUTHORITY DASHBOARD
+============================================================
+
+Create:
+
+/authority
+
+Dashboard sections:
+
+Overview
+Pending Reports
+Pending Sightings
+Verified Cases
+Active Cases
+Recent Updates
+
+Stats:
+
+Pending Reports
+Pending Sightings
+Active Cases
+Verified Cases
+Found Cases
+
+Each report:
+
+Case ID
+Person
+Reporter
+Submitted date
+Status
+
+Actions:
+
+Review
+Verify
+Reject
+Request More Information
+
+============================================================
+25. VERIFICATION WORKFLOW
+============================================================
+
+This is a CORE FEATURE.
+
+New reports start:
+
+PENDING VERIFICATION
+
+Authority reviews:
+
+- Identity information
+- Photograph
+- Reporter information
+- Last-seen information
+- Evidence
+- Duplicate possibilities
+
+Actions:
+
+VERIFY
+REJECT
+REQUEST MORE INFORMATION
+
+Verified cases show:
+
+✓ VERIFIED
+
+Text:
+
+"Verified by an authorized reviewer."
+
+Never allow ordinary users to self-verify.
+
+============================================================
+26. MAP
+============================================================
+
+Create:
+
+/map
+
+Use:
+
+Leaflet + OpenStreetMap
+
+Display:
+
+Missing locations
+Verified sightings
+Case locations
+Clusters
+
+Marker types:
+
+Missing
+Sighting
+Verified
+Found
+
+Click marker:
+
+Show case preview.
+
+Features:
+
+Search
+Zoom
+Filters
+List/map toggle
+
+PRIVACY:
+
+Use approximate location for public users where appropriate.
+
+Exact coordinates should only be visible to authorized roles when justified.
+
+============================================================
+27. CASE TIMELINE
+============================================================
+
+Every case must have a timeline.
+
+Example:
+
+Report submitted
+↓
+Verification
+↓
+Case published
+↓
+Sighting submitted
+↓
+Sighting reviewed
+↓
+Investigation update
+↓
+Person found
+↓
+Case closed
+
+Each event:
+
+Date/time
+Type
+Author
+Description
+
+Important historical records should not be silently overwritten.
+
+============================================================
+28. USER DASHBOARD
+============================================================
+
+Create:
+
+/dashboard
+
+Cards:
+
+My Cases
+Pending Reports
+Sightings Submitted
+Resolved Cases
+
+Sections:
+
+My Cases
+My Sightings
+Recent Updates
+Notifications
+
+Timeline.
+
+============================================================
+29. NOTIFICATIONS
+============================================================
+
+Create notification bell.
+
+Notifications:
+
+- Report submitted
+- Report verified
+- Report rejected
+- New sighting
+- Sighting reviewed
+- Case status changed
+- Authority update
+
+Features:
+
+Unread count
+Mark read
+Mark all read
+Notification page
+
+Use Supabase Realtime if practical.
+
+============================================================
+30. ADMIN DASHBOARD
+============================================================
+
+Create:
+
+/admin
+
+Sidebar:
+
+Overview
+Cases
+Verification
+Sightings
+Users
+Map
+Analytics
+Audit Logs
+Moderation
+Settings
+
+Overview cards:
+
+Total Cases
+Active Cases
+Pending Verification
+Found
+Pending Sightings
+Users
+
+============================================================
+31. ADMIN ANALYTICS
+============================================================
+
+Create charts:
+
+Cases by status
+Cases over time
+Cases by location
+Sightings over time
+Resolution rate
+Average case duration
+
+Use Recharts.
+
+Use fictional/demo data.
+
+============================================================
+32. USER MANAGEMENT
+============================================================
+
+Create:
+
+/admin/users
+
+Features:
+
+Search
+Filter
+View
+Suspend
+Activate
+Role management
+
+Admin can change:
+
+User
+Reporter
+Authority
+
+Never allow a normal user to promote themselves.
+
+============================================================
+33. MODERATION
+============================================================
+
+Create:
+
+/admin/moderation
+
+Show:
+
+Flagged cases
+Potential duplicates
+Suspicious reports
+Abuse reports
+
+Actions:
+
+Review
+Dismiss
+Restrict
+Reject
+Escalate
+
+============================================================
+34. DUPLICATE DETECTION
+============================================================
+
+Create an AI-assisted/simple similarity system.
+
+Compare:
+
+Name
+Age
+Gender
+Location
+Date
+Description
+
+If similarity is high:
+
+Show:
+
+"Possible duplicate case"
+
+Do NOT automatically merge.
+
+Require authority/admin review.
+
+============================================================
+35. AI FEATURES
+============================================================
+
+Add responsible AI-assisted features.
+
+FEATURE 1:
+Duplicate detection
+
+FEATURE 2:
+Report completeness assistant
+
+Before submission:
+
+Check whether required fields are missing.
+
+FEATURE 3:
+Case timeline summary
+
+For authorized users only.
+
+FEATURE 4:
+Sighting prioritization
+
+Consider:
+- Geographic proximity
+- Time proximity
+- Completeness
+
+Always display:
+
+"AI-assisted recommendation — requires human verification."
+
+Never let AI automatically:
+- Declare a person found
+- Verify identity
+- Reject a case
+- Confirm a sighting
+
+============================================================
+36. CASE SHARING
+============================================================
+
+Add:
+
+Share Case
+
+Options:
+
+Copy link
+WhatsApp
+Facebook
+X
+Email
+
+Shared case pages must contain public-safe information only.
+
+Add social metadata.
+
+============================================================
+37. LANGUAGE SUPPORT
+============================================================
+
+Primary:
+
+English
+
+Prepare architecture for:
+
+Telugu
+
+Language selector:
+
+English | తెలుగు
+
+Translate:
+
+Navigation
+Buttons
+Major headings
+Form labels
+Status labels
+Important messages
+
+============================================================
+38. SAFETY PAGE
+============================================================
+
+Create:
+
+/safety
+
+Include:
+
+- Do not confront suspected persons
+- Do not follow people
+- Do not publish private information
+- Do not submit false reports
+- Do not misuse the platform
+- Contact appropriate authorities in emergencies
+- FindBack does not replace official law enforcement
+
+============================================================
+39. PRIVACY PAGE
+============================================================
+
+Create:
+
+/privacy
+
+Explain:
+
+- What information is collected
+- Why information is collected
+- Who can access information
+- Public vs restricted information
+- Data protection
+- Account security
+- Reporting abuse
+
+============================================================
+40. TERMS
+============================================================
+
+Create:
+
+/terms
+
+Include appropriate platform terms.
+
+============================================================
+41. REPORT ABUSE
+============================================================
+
+Create:
+
+/report-abuse
+
+Allow users to report:
+
+False information
+Spam
+Harassment
+Privacy violations
+Duplicate cases
+Abuse
+
+============================================================
+42. RESPONSIVE DESIGN
+============================================================
+
+The application must work perfectly on:
+
+Mobile
+Tablet
+Desktop
+
+Test:
+
+375px
+768px
+1440px
+
+Mobile:
+
+- Collapsible sidebar
+- Touch-friendly buttons
+- Responsive cards
+- Mobile forms
+- Responsive maps
+- Bottom navigation if useful
+
+============================================================
+43. ACCESSIBILITY
+============================================================
+
+Implement:
+
+Semantic HTML
+Keyboard navigation
+Visible focus
+Accessible labels
+Alt text
+Color contrast
+ARIA where appropriate
+
+Forms:
+
+Clear validation.
+
+============================================================
+44. ERROR HANDLING
+============================================================
+
+Create:
+
+Loading skeletons
+Error states
+Empty states
+Toast notifications
+404 page
+403 page
+500 page
+
+Never show raw errors or database stack traces.
+
+============================================================
+45. DEMO DATA
+============================================================
+
+Create fictional demo data.
+
+IMPORTANT:
+
+Do NOT use real missing-person information.
+
+Create:
+
+15 fictional cases
+10 fictional sightings
+5 users
+2 authorities
+1 admin
+
+Statuses:
+
+Pending Verification
+Verified
+Active
+Under Investigation
+Possible Sighting
+Found
+Closed
+
+Use fictional names and fictional demo information.
+
+============================================================
+46. DEMO EXPERIENCE
+============================================================
+
+Create a smooth judge demonstration.
+
+Judge flow:
+
+1. Open homepage
+2. Search missing persons
+3. Open case
+4. View case timeline
+5. View map
+6. Submit sighting
+7. Login as authority
+8. Review sighting
+9. Verify sighting
+10. Update case
+11. Login as admin
+12. Show analytics
+13. Show audit log
+
+All steps must work.
+
+============================================================
+47. SUPABASE STORAGE
+============================================================
+
+Create storage buckets where needed:
+
+case-photos
+sighting-evidence
+avatars
+
+Apply appropriate policies.
+
+Public case photos may use public access only if appropriate.
+
+Sensitive evidence must NOT be publicly accessible.
+
+Use signed URLs or protected access where appropriate.
+
+============================================================
+48. SUPABASE REALTIME
+============================================================
+
+Where practical, use Supabase Realtime for:
+
+- Notifications
+- Case updates
+- Authority dashboard updates
+- Sighting updates
+
+Do not overcomplicate the architecture if it threatens reliability.
+
+============================================================
+49. SECURITY
+============================================================
+
+Implement:
+
+Supabase Auth
+RLS
+Input validation
+Zod validation
+File validation
+Rate limiting where applicable
+Secure headers
+Safe error handling
+Role authorization
+Protected routes
+
+Never trust frontend role information.
+
+Never expose:
+- Service role key
+- Database password
+- Private API keys
+
+============================================================
+50. SEARCH PERFORMANCE
+============================================================
+
+Use database queries efficiently.
+
+Implement:
+
+Pagination
+Filtering
+Sorting
+Search
+Debouncing
+
+Avoid loading all cases into the browser unnecessarily.
+
+============================================================
+51. COMPONENT ARCHITECTURE
+============================================================
+
+Create reusable:
+
+Navbar
+Footer
+CaseCard
+CaseStatusBadge
+SearchBar
+FilterPanel
+MapView
+CaseTimeline
+SightingCard
+VerificationModal
+ReportForm
+PhotoUploader
+NotificationPanel
+DashboardCard
+ChartCard
+DataTable
+ConfirmDialog
+Toast
+LoadingSkeleton
+EmptyState
+ProtectedRoute
+
+Do not create giant components.
+
+============================================================
+52. NAVIGATION
+============================================================
+
+Public navbar:
+
+Logo
+Search
+Missing Persons
+Map
+How It Works
+Safety
+
+Button:
+
+Report Missing Person
+
+Authenticated:
+
+Dashboard
+Notifications
+Profile
+
+Authority:
+
+Authority Dashboard
+
+Admin:
+
+Admin Dashboard
+
+============================================================
+53. PWA
+============================================================
+
+If practical, configure the project as a Progressive Web App.
+
+Include:
+
+Manifest
+App icon
+Mobile-friendly interface
+
+============================================================
+54. README
+============================================================
+
+Create a professional README.
+
+Include:
+
+Project name
+Problem
+Solution
+Features
+Architecture
+Tech stack
+Supabase setup
+Database schema
+RLS
+Authentication
+Installation
+Environment variables
+Running locally
+Demo accounts
+API/service structure
+Security
+Future improvements
+
+============================================================
+55. ENVIRONMENT VARIABLES
+============================================================
+
+Create:
+
+.env.example
+
+Use:
+
+VITE_SUPABASE_URL=https://xeacsypbukaupzhynghk.supabase.co
+
+VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_ZOYwMtNixcFWONfrmsavew_BQfh1M4I
+
+Optional:
+
+VITE_MAPS_API_KEY=
+
+Other server-side secrets must remain server-side.
+
+NEVER add service-role keys to frontend code.
+
+============================================================
+56. DATABASE SETUP
+============================================================
+
+Create Supabase SQL migration/schema files.
+
+Create:
+
+supabase/migrations/
+
+Include:
+
+- profiles
+- missing_persons
+- sightings
+- case_updates
+- notifications
+- verifications
+- audit_logs
+- report_flags
+- case_locations
+
+Enable UUIDs where appropriate.
+
+Create foreign keys.
+
+Create indexes for:
+
+case_id
+status
+name
+location
+created_at
+reporter_id
+
+Create RLS policies.
+
+============================================================
+57. DEMO SEEDING
+============================================================
+
+Create a seed/demo-data process.
+
+It should create fictional:
+
+Cases
+Sightings
+Users
+Notifications
+Case updates
+Audit records
+
+Avoid duplicate uncontrolled data when re-running.
+
+============================================================
+58. POLISHED UI
+============================================================
+
+The interface should feel premium.
+
+Use:
+
+- Consistent spacing
+- Rounded cards
+- Clear typography
+- Professional icons
+- Subtle shadows
+- Good empty states
+- Skeleton loading
+- Toast feedback
+- Responsive layouts
+
+Create professional case cards.
+
+Example:
+
+[PHOTO]
+
+VERIFIED
+
+Priya Sharma
+Age 24
+
+Last seen:
+Kadapa, Andhra Pradesh
+
+Reported:
+October 4, 2026
+
+[View Case]
+
+All demo information must be fictional.
+
+============================================================
+59. TRUST INDICATORS
+============================================================
+
+Add:
+
+✓ Verified information
+🔒 Privacy protected
+🛡️ Authorized review
+📍 Location-aware
+📝 Auditable updates
+
+Do not falsely claim government endorsement or official police integration.
+
+============================================================
+60. FINAL HACKATHON STORY
+============================================================
+
+The product should clearly communicate:
+
+THE PROBLEM:
+
+Missing-person information is often fragmented across social media,
+messages and different sources.
+
+THE SOLUTION:
+
+FindBack creates a structured, verified and privacy-conscious platform
+for reporting cases, sharing sightings and coordinating updates.
+
+THE DIFFERENTIATOR:
+
+Verification + Location Intelligence + Case Timeline + Privacy + AI Assistance.
+
+============================================================
+61. FINAL QUALITY CHECK
+============================================================
+
+Before finishing:
+
+Run the application.
+
+Test:
+
+- Registration
+- Login
+- Logout
+- Password reset
+- Report creation
+- Case search
+- Case details
+- Sighting submission
+- Authority verification
+- Status updates
+- Notifications
+- Admin dashboard
+- Analytics
+- User management
+- Audit logs
+- Map
+- Mobile layout
+
+Fix:
+
+TypeScript errors
+Console errors
+Broken imports
+Broken links
+Database errors
+RLS errors
+Authentication errors
+UI overflow
+Mobile issues
+
+Do not leave:
+
+TODOs
+Fake buttons
+Dead links
+Broken pages
+Placeholder dashboards
+Unimplemented forms
+
+If a feature cannot be implemented safely with available services,
+create a working fallback/demo implementation instead of breaking the app.
+
+============================================================
+62. FINAL JUDGE DEMO
+============================================================
+
+The homepage must immediately communicate:
+
+FIND-BACK
+
+"Verified information. Faster action. Bring them home."
+
+Then the judge should be able to:
+
+REPORT
+→ VERIFY
+→ SEARCH
+→ SIGHT
+→ REVIEW
+→ UPDATE
+→ RESOLVE
+
+Make this flow extremely polished.
+
+============================================================
+63. FINAL DELIVERABLE
+============================================================
+
+Build the actual FindBack application now.
+
+Do not just explain the implementation.
+
+Create the files.
+
+Create the database schema/migrations.
+
+Create Supabase integration.
+
+Create authentication.
+
+Create RLS.
+
+Create all required pages.
+
+Create dashboards.
+
+Create forms.
+
+Create search.
+
+Create map.
+
+Create case management.
+
+Create sightings.
+
+Create verification.
+
+Create notifications.
+
+Create analytics.
+
+Create audit logs.
+
+Create demo data.
+
+Create responsive UI.
+
+Create README.
+
+Run and test the application.
+
+Fix errors before considering the implementation complete.
+
+The final product must be suitable for a Build to Ship hackathon demo.
+
+FIND-BACK
+
+"Verified information. Faster action. Bring them home."
